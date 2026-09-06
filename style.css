@@ -1,0 +1,89 @@
+/* Configuração global da página */
+body {
+  margin: 0;                          /* Remove a margem padrão das bordas da tela */
+  min-height: 100vh;                  /* Garante que o corpo tenha no mínimo a altura total da tela */
+  display: flex;                      /* Ativa o layout flexível */
+  justify-content: center;            /* Centraliza os elementos na horizontal */
+  align-items: center;                /* Centraliza os elementos na vertical */
+  background-color: #f4f4f4;          /* Define uma cor de fundo cinza clara padrão */
+  position: relative;                 /* Cria um ponto de referência para o posicionamento das camadas */
+}
+
+/* Estilização da imagem de fundo */
+.background-image {
+  position: fixed;                    /* Fixa a imagem na tela para não acompanhar a rolagem */
+  top: 0;                             /* Alinha a imagem no topo da tela */
+  left: 0;                            /* Alinha a imagem na esquerda da tela */
+  width: 100vw;                       /* Faz a largura ocupar 100% da janela */
+  height: 100vh;                      /* Faz a altura ocupar 100% da janela */
+  object-fit: cover;                  /* Faz a imagem cobrir o espaço sem distorcer proporções */
+  z-index: 0;                         /* Define a camada base do fundo */
+  pointer-events: none;               /* Faz o mouse ignorar a imagem, permitindo clicar no que está atrás/frente */
+}
+
+/* Caixa principal do formulário (Card) */
+.card {
+  color: aliceblue;                   /* Define a cor padrão do texto como azul claro */
+  background-color: rgba(68, 64, 64, 0.8); /* Define fundo cinza escuro com 80% de transparência */
+  padding: 20px;                      /* Adiciona margem interna de 20 pixels em todas as direções */
+  border-radius: 10px;                /* Arredonda as pontas da caixa */
+  display: flex;                      /* Ativa o flexbox dentro da caixa */
+  flex-direction: column;             /* Empilha os elementos internos em formato de coluna */
+  gap: 12px;                          /* Cria um espaçamento automático de 12px entre os elementos */
+  max-width: 350px;                   /* Limita a largura máxima da caixa a 350 pixels */
+  width: 100%;                        /* Faz a caixa se adaptar se a tela for menor que 350px */
+  font-family: 'Po', sans-serif;      /* Define a fonte do texto */
+  position: relative;                 /* Permite o uso de camadas relativas */
+  z-index: 2;                         /* Coloca o card em uma camada acima da imagem de fundo */
+}
+
+/* Estilização padrão dos links */
+a {
+  color: white;                       /* Define a cor inicial do texto do link como branca */
+  text-decoration: none;              /* Remove o sublinhado padrão do link */
+  font-size: 12px;                    /* Define o tamanho da fonte para 12 pixels */
+  margin-bottom: 18px;                /* Adiciona um espaço de 12px abaixo do link */
+}
+
+/* Efeito ao passar o mouse sobre o link */
+a:hover {
+  color: rgb(132, 132, 1);            /* Altera a cor do link para tom amarelado ao passar o cursor */
+}
+
+/* Estilização do botão de envio */
+.card-buttom {
+  width: auto;                        /* Ajusta a largura automaticamente com base no texto */
+  padding: 6px 16px;                  /* Define espaçamento interno (6px em cima/baixo, 16px nas laterais) */
+  font-size: 14px;                    /* Define o tamanho da letra do botão para 14 pixels */
+  border: none;                       /* Remove a borda padrão do botão do navegador */
+  border-radius: 4px;                 /* Arredonda levemente os cantos do botão */
+  cursor: pointer;                    /* Muda o ícone do mouse para uma mãozinha ao passar por cima */
+  display: block;                     /* Transforma o elemento em bloco */
+  margin-top: 12px;                   /* Adiciona margem superior de 12 pixels */
+  margin-bottom: 0;                   /* Define margem inferior como zero */
+  margin-left: auto;                  /* Empurra o botão para a direita alinhando horizontalmente */
+  margin-right: 0;                    /* Zera a margem direita */
+  background-color: #555555;          /* Define a cor de fundo inicial do botão como cinza */
+  color: white;                       /* Define a cor do texto do botão como branco */
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Cria animação suave de 0s.3 para as cores */
+  position: relative;                 /* Define posicionamento relativo para camadas */
+  z-index: 10;                        /* Garante prioridade máxima de clique no topo de tudo */
+}
+
+/* Efeito ao passar o mouse sobre o botão */
+.card-buttom:hover {
+  background-color: rgb(0, 4, 74);    /* Altera o fundo para azul escuro quando o mouse passa em cima */
+  color: white;                       /* Mantém o texto branco durante o efeito */
+}
+
+/* Ajustes para elementos secundários */
+.links-container {
+  display: flex;
+  justify-content: space-between; /* Separa um link para cada ponta */
+  align-items: center;
+  margin-top: 5px;
+}
+
+.links-container a {
+  margin-bottom: 0; /* Remove margens antigas que atrapalham */
+}
