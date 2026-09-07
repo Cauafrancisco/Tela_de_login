@@ -87,3 +87,14 @@ a:hover {
 .links-container a {
   margin-bottom: 0; /* Remove margens antigas que atrapalham */
 }
+.card-input{
+  background-color: rgba(225, 220, 220, 0.8); /* Define fundo branco com 80% de transparência */
+  color: rgb(0, 0, 0); /* Define a cor do texto como azul */
+  border: solid 1px white; /* Remove a borda padrão do input */
+  padding: 8px; /* Adiciona espaçamento interno de 8 pixels */
+}
+@media (max-width: 400px) {
+  .card {
+    max-width: 90%; /* Ajusta a largura máxima do card para 90% da tela em dispositivos menores */
+  }
+}
