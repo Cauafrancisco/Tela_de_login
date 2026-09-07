@@ -95,6 +95,10 @@ a:hover {
 }
 @media (max-width: 400px) {
   .card {
+    width: 90%; /* Ocupa quase a largura toda da tela, deixando uma margem nas pontas */
+    padding: 15px; /* Reduz o padding interno para economizar espaço */
+    margin: 0 auto; /* Centraliza o card na tela */
     max-width: 90%; /* Ajusta a largura máxima do card para 90% da tela em dispositivos menores */
   }
+
 }
